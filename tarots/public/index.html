@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Tarot Chat</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <p class="eyebrow">Tarot Chat</p>
+        <h1>Une lecture de tarot légère, claire et mobile-first.</h1>
+        <p class="subtitle">
+          Entre ton profil, choisis un thème et révèle tes cartes pour obtenir
+          une lecture chaleureuse.
+        </p>
+      </header>
+
+      <section class="card form-card" id="form-section">
+        <h2>Fais connaissance avec ton tarot.</h2>
+        <p>Quelques détails pour une lecture personnalisée.</p>
+        <form id="profile-form">
+          <label>
+            Nom
+            <input name="name" type="text" placeholder="Ton prénom" required />
+          </label>
+          <div class="grid">
+            <label>
+              Âge
+              <input name="age" type="number" min="1" required />
+            </label>
+            <label>
+              Date de naissance
+              <input name="birthDate" type="date" required />
+            </label>
+          </div>
+          <fieldset>
+            <legend>Genre</legend>
+            <label class="radio">
+              <input type="radio" name="gender" value="homme" checked />
+              Homme
+            </label>
+            <label class="radio">
+              <input type="radio" name="gender" value="femme" />
+              Femme
+            </label>
+          </fieldset>
+          <button type="submit" class="primary">Continuer</button>
+        </form>
+      </section>
+
+      <section class="card" id="chat-section" hidden>
+        <p class="zodiac" id="zodiac-text"></p>
+        <div class="bubble">Tu veux des réponses à quel propos ?</div>
+        <div class="chips" id="topic-chips"></div>
+      </section>
+
+      <section class="card" id="draw-section" hidden>
+        <div class="draw-header">
+          <h3 id="draw-title">Tirage</h3>
+          <p>Tap sur chaque carte pour la révéler.</p>
+        </div>
+        <div class="cards" id="cards-grid"></div>
+      </section>
+
+      <section class="card" id="reading-section" hidden>
+        <h3>Lecture</h3>
+        <p class="muted" id="reading-status">Révèle les cartes pour démarrer.</p>
+        <pre id="reading-output"></pre>
+      </section>
+
+      <footer class="footer" id="footer-text">Chargement des cartes...</footer>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
