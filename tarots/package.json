@@ -1,0 +1,17 @@
+{
+  "name": "tarot-chat",
+  "version": "1.0.0",
+  "description": "Tarot Chat ultra léger (vanilla + Express)",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "echo \"no build step\""
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
